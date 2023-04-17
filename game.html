@@ -1,6 +1,17 @@
 <!DOCTYPE html>
-<head></head>
+<head><link rel="stylesheet" href="style.css"></head>
 <body>
+    <div class="banner2">
+        <div class="navbar">
+          <img src="logo.jpg" class="logo">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="game.html">Games</a></li>
+            <li><a href="#">Memes</a></li>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">Profile</a></li>
+          </ul>
+        </div>
 </body>
 <canvas id="gameCanvas" width="800" height="600"></canvas>
 <script>
@@ -88,7 +99,7 @@
             return;
         }
         
-        // computerMovement();
+        computerMovement();
 
         ballX += ballSpeedX;
         ballY += ballSpeedY;
@@ -141,7 +152,7 @@
         colorRect(0,0,canvas.width,canvas.height,'black');
 
         if(isshowingWinScreen){
-            canvasContext.fillStyle = 'yellow';
+            canvasContext.fillStyle = 'white';
             canvasContext.fillText("Click to continue...", canvas.width/2-35,canvas.height - 100);             
             canvasContext.fillText(player1score, canvas.width/2-14,canvas.height - 50);        
             canvasContext.fillText(":", canvas.width/2-1,canvas.height - 50);
@@ -161,7 +172,7 @@
         //right paddle
         colorRect(canvas.width - PADDLE_THICKNESS,paddle2Y,canvas.width - PADDLE_THICKNESS,PADDLE_HEIGHT,'white');
         //draws the ball
-        colorCircle(ballX,ballY,10,'yellow');
+        colorCircle(ballX,ballY,10,'white');
 
         canvasContext.fillText(player1score, canvas.width/2-14,canvas.height - 50);        
         canvasContext.fillText(":", canvas.width/2-1,canvas.height - 50);

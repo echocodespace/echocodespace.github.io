@@ -150,18 +150,20 @@
     function drawEverything(){
         //makes black screen
         colorRect(0,0,canvas.width,canvas.height,'black');
+        canvasContext.font = "16px Arial";
+        canvasContext.textAlign="middle";
 
         if(isshowingWinScreen){
             canvasContext.fillStyle = 'white';
-            canvasContext.fillText("Click to continue...", canvas.width/2-35,canvas.height - 100);             
+            canvasContext.fillText("Click to continue...", canvas.width/2-50,canvas.height - 100);             
             canvasContext.fillText(player1score, canvas.width/2-14,canvas.height - 50);        
-            canvasContext.fillText(":", canvas.width/2-1,canvas.height - 50);
+            canvasContext.fillText(":", canvas.width/2-2,canvas.height - 50);
             canvasContext.fillText(player2score, canvas.width/2+10,canvas.height - 50);
             
             if(player1score >= WINNING_SCORE){
-                canvasContext.fillText("Left Player Won!", canvas.width/2-35, 300)
+                canvasContext.fillText("Left Player Won!", canvas.width/2-50, 300)
             }else if(player2score >= WINNING_SCORE){
-                canvasContext.fillText("Right Player Won!", canvas.width/2-35, 300)
+                canvasContext.fillText("Right Player Won!", canvas.width/2-50, 300)
             }
             return;
         }
@@ -175,7 +177,7 @@
         colorCircle(ballX,ballY,10,'white');
 
         canvasContext.fillText(player1score, canvas.width/2-14,canvas.height - 50);        
-        canvasContext.fillText(":", canvas.width/2-1,canvas.height - 50);
+        canvasContext.fillText(":", canvas.width/2-2,canvas.height - 50);
         canvasContext.fillText(player2score, canvas.width/2+10,canvas.height - 50);
     }
 
